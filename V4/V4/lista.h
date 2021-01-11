@@ -115,7 +115,7 @@ const T& Lista<T>::operator*() {
 	T* t = prvi->pod;
 	Elem* novi = prvi->sled;
 	prvi->pod = nullptr;
-	prvi->pret = nullptr;
+	prvi->sled = nullptr;
 	delete prvi;
 	prvi = novi;
 	if (!prvi) posl = nullptr;
