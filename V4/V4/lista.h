@@ -99,9 +99,9 @@ const T& Lista<T>::operator-() {
 
 	T* t = posl->pod;
 	Elem* novi = posl->pret;
-	delete posl;
 	posl->pod = nullptr;
 	posl->pret = nullptr;
+	delete posl;
 	posl = novi;
 	if (!posl) prvi = nullptr;
 	n--;
@@ -114,9 +114,9 @@ const T& Lista<T>::operator*() {
 
 	T* t = prvi->pod;
 	Elem* novi = prvi->sled;
-	delete prvi;
 	prvi->pod = nullptr;
 	prvi->pret = nullptr;
+	delete prvi;
 	prvi = novi;
 	if (!prvi) posl = nullptr;
 	n--;
