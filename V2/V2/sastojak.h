@@ -9,7 +9,7 @@ public:
 	const Namirnica& dohvNam() const { return nam; }
 	double dohvKolicina() const { return kolicina; }
 
-	const NutritivnaVrednost& dohvNv() const { return nam.dohvNv(); }
+	NutritivnaVrednost dohvNv() const;
 
 	double kalorija() const;
 

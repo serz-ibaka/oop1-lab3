@@ -39,7 +39,7 @@ int Aranzman::dohvTrajanje() const {
 
 double Aranzman::dohvCena() const {
 	if (!smestaj || !prevoz) throw GNedodeljenAtribut();
-	return dohvTrajanje() * smestaj->dohvCena();
+	return dohvTrajanje() * smestaj->dohvCena() + prevoz->dohvCena();
 }
 
 void Aranzman::postSmestaj(Smestaj& s) { 

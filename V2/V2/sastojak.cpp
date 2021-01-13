@@ -5,6 +5,11 @@ Sastojak::Sastojak(const Namirnica& n, double k)
 	if (kolicina < 0) throw GNegativanUnos();
 }
 
+NutritivnaVrednost Sastojak::dohvNv() const {
+	NutritivnaVrednost n = nam.dohvNv();
+	return NutritivnaVrednost(n.dohvUh() * kolicina / 100, n.dohvMa() * kolicina / 100, n.dohvPr() * kolicina / 100);
+}
+
 double Sastojak::kalorija() const {
 	return kolicina * dohvNv().kalorija() / 100;
 }

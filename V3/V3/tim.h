@@ -42,17 +42,19 @@ public:
 	void smanji(double procenat);
 
 protected:
-	Igrac** igraci;
+	Igrac** igraci = nullptr;
 	
 	virtual void pisi(ostream& it) const;
+
+	void kopiraj(const Tim& t);
+	void premesti(Tim& t);
+	void brisi();
+
 private:
 	string naziv;
 	int maks;
 	int tren = 0;
 
-	void kopiraj(const Tim& t);
-	void premesti(Tim& t);
-	void brisi();
 
 };
 

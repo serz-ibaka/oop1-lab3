@@ -1,7 +1,13 @@
 #include "mec.h"
 
+Privilegovani f() {
+	Privilegovani p = Privilegovani("Sumadija", 12, 12312);
+	return p;
+}
+
 int main() {
 	try {
+		Privilegovani p = f();
 		Igrac i1("Sergej", 1500),
 			i2("Kristina", 10000),
 			i3("Katarina", 2500),

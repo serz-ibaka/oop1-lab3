@@ -12,6 +12,11 @@ public:
 class Privilegovani : public Tim {
 public:
 	Privilegovani(const string& n, int ma, int mi);
+	Privilegovani(const Privilegovani& p) : Tim(p), min(p.min) {}
+	Privilegovani(Privilegovani&& p) noexcept : Tim(p), min(p.min) {}
+
+	Privilegovani& operator=(const Privilegovani& p);
+	Privilegovani& operator=(Privilegovani&& p);
 
 	void dodajIgraca(const Igrac& ig, int i) override;
 
